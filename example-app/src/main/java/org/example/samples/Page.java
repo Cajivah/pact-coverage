@@ -1,8 +1,9 @@
 package org.example.samples;
 
-public record Page<T>(Iterable<T> content, Metadata metadata) {
+import java.util.Collection;
+
+public record Page<T>(Collection<T> content, Metadata metadata) {
     record Metadata(int page, int size, int totalPages, long totalElements) {
     }
-
 }
 

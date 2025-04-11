@@ -13,7 +13,7 @@ public class SamplesController {
         this.samplesRepository = samplesRepository;
     }
 
-    @GetMapping("/samples")
+    @GetMapping(value = "/samples", produces = "application/json")
     public Page<Sample> samples(
             @RequestParam("pageToken") String pageToken,
             @RequestParam("pageSize") String pageSize
